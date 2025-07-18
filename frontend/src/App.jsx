@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<MainPage />} />
         {/* <Route path='/game' element={<GamePage />} /> */}
-        <Route path='*' element={<Navigate to='/' />} />
+        <Route path='/*' element={<Navigate to='/' />} />
       </Routes>
     </>
   )
