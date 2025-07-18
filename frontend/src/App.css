@@ -1,7 +1,9 @@
 body {
     background-color: brown;
 }
-.greeting{
+
+/* Headers styling */
+h1{
     background-color: beige;
 }
 .topNav{

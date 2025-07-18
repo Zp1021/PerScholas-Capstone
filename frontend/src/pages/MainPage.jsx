@@ -1,10 +1,11 @@
 import { Route } from "react-router-dom";
+import Header from "../components/Header";
 
 export default function MainPage() {
 
     return (
         <div>
-            <h1 className="greeting">Welcome Everyone</h1>
+            <Header/>
             <nav className="topNav">
                 Something as an example
             </nav>
