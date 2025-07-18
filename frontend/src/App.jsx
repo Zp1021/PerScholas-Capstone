@@ -1,11 +1,15 @@
 import './App.css'
 import MainPage from './components/MainPage'
 
+import { Routes, Route, Navigate } from 'react-router-dom'
+
 function App() {
 
   return (
     <>
-      <MainPage/>
+      <Routes>
+        <Route path='/' element={<MainPage />} />       
+      </Routes>
     </>
   )
 }
