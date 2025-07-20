@@ -9,8 +9,6 @@ export default function MainPage() {
         <div>
             <Header />
             <NavBar />
-            Hello World
-            {/* <ScoreForm/> */}
         </div>
     )
 }
