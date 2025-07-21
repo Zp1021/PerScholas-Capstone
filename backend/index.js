@@ -6,9 +6,19 @@ import connectDb from './db.js'
 
 import Player from './models/player.js'
 
+// Initializing server
 const app = express()
 
+// PORT for express server
 const port = process.env.PORT
+
+// Middleware
+app.use(express.json())
+
+app.use((req, res, next) => {
+    console.log(req.path, req.method)
+    next()
+})
 
 // Endpoints
 // GET all players
@@ -51,7 +61,6 @@ app.patch('/players/:id', async (req, res) => {
 app.delete('/players/:id', async (req, res) => {
     try {
         const response = await Player.findByIdAndDelete(req.params.id)
-        console.log(response)
         res.status(200).json(response)
     } catch (e) {
         console.log(e)
@@ -59,6 +68,7 @@ app.delete('/players/:id', async (req, res) => {
     }
 })
 
+// Port for express server to listen to
 app.listen(port, () => {
     console.log('Listening on port: ' + port)
     connectDb()
