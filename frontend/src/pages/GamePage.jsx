@@ -1,5 +1,6 @@
 // import { Route } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import GameConfig from "../../game components/GameConfig";
 
 export default function GamePage() {
 
@@ -7,7 +8,7 @@ export default function GamePage() {
         <div>
             <h1>Game Room</h1>
             <NavBar/>
-            {/* <Game/> */}
+            <GameConfig/>
             {/* <ScoreForm/> */}
         </div>
     )

@@ -3,7 +3,7 @@ import Phaser from "phaser";
 import { useEffect } from "react";
 
 
-export default function Game() {
+export default function GameConfig() {
     const config = {
         type: Phaser.AUTO,
         title: 'Overlord Rising',
