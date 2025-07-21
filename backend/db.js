@@ -6,7 +6,7 @@ async function connectDb() {
         console.log('MongoDB connected')
     } catch (error) {
         console.log(e)
-    }   
+    }
 }
 
 export default connectDb
