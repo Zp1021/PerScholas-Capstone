@@ -8,7 +8,7 @@ export default function NavBar() {
         <nav className="nav">
             <Link to="/" className="site-title">Home</Link>
             <ul>
-                <li><Link to="/game">Game Room</Link></li>
+                <li><Link to="/game">Game</Link></li>
                 <li><Link to="/scores">Scores</Link></li>
                 <li><Link to="/About">About</Link></li>
             </ul>

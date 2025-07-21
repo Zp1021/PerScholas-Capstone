@@ -5,7 +5,7 @@ export default function GamePage() {
 
     return (
         <div>
-            <h1>Game</h1>
+            <h1>Game Room</h1>
             <NavBar/>
             {/* <Game/> */}
             {/* <ScoreForm/> */}
