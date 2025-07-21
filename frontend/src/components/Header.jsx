@@ -1,8 +1,8 @@
-import '../App.css'
+// import '../App.css'
 
-// Export function that returns the header of the main page
-export default function Header() {
-    return (
-        <h1 className="greeting">Welcome to the Establishment</h1>
-    )
-}
+// // Export function that returns the header of the main page
+// export default function Header() {
+//     return (
+//         <h1 className="greeting">Welcome</h1>
+//     )
+// }

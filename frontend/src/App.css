@@ -1,48 +1,52 @@
 body {
-    background-color: brown;
+    background-color: lightblue;
 }
 
 /* Headers styling */
-h1{
+h1 {
     background-color: beige;
 }
 
 /* Navbar styling */
 .nav {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
+    background-color: lightgray;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* gap: 2rem; */
+    padding: 0 1rem;
 }
 
 .site-title {
-  font-size: 2rem;
+    font-size: 3rem;
 }
 
 .nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
 }
 
 .nav a {
-  color: inherit;
-  text-decoration: none;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: .25rem;
-}
-
-.nav li.active {
-  background-color: #555;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+    font-size: 2rem;
 }
 
 .nav li:hover {
-  background-color: #777;
+    background-color: whitesmoke;
+    font-weight: bolder;
+}
+
+.greeting {
+    text-align: center;
+    color: black;
+    font-size: 3rem;
 }
