@@ -7,6 +7,25 @@ h1 {
     background-color: beige;
 }
 
+/* Label Styling */
+label{
+    font-size: 3rem;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 1.5rem;
+    font-size: large;
+    font-weight: bolder;
+}
+button{
+    margin-top: 1rem;
+    width: 12rem;
+    height: 2rem;
+    font-size: larger;
+    font-weight: bolder;
+}
 /* Navbar styling */
 .nav {
     background-color: lightgray;
@@ -53,11 +72,23 @@ h1 {
 
 .gif-container {
     margin: 15%;
-    display: grid;
+    display: flex;
     align-items: flex-end;
     justify-content: center;
 }
 
 .cats {
     width: 100rem;
+}
+
+.score-form {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    font-weight: bolder;
+}
+
+.name-text{
+    size: 12rem;
 }

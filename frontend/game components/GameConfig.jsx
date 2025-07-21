@@ -37,8 +37,6 @@ export default function GameConfig() {
         }
     }, [])
     return (
-        <div>
-            <div id="phaser-container" />
-        </div>
+        <div id="phaser-container" />
     )
 }
