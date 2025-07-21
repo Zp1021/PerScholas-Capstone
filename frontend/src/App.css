@@ -8,10 +8,11 @@ h1 {
 }
 
 /* Label Styling */
-label{
+label {
     font-size: 3rem;
 }
-input{
+
+input {
     display: flex;
     flex-direction: column;
     width: 10rem;
@@ -19,13 +20,15 @@ input{
     font-size: large;
     font-weight: bolder;
 }
-button{
+
+button {
     margin-top: 1rem;
     width: 12rem;
     height: 2rem;
     font-size: larger;
     font-weight: bolder;
 }
+
 /* Navbar styling */
 .nav {
     background-color: lightgray;
@@ -89,6 +92,6 @@ button{
     font-weight: bolder;
 }
 
-.name-text{
+.name-text {
     size: 12rem;
 }

@@ -9,9 +9,9 @@ export default function GamePage() {
     return (
         <div>
             <h1>Game Room</h1>
-            <NavBar/>
-            <GameConfig/>
-            <ScoreForm/>
+            <NavBar />
+            <GameConfig />
+            <ScoreForm />
         </div>
     )
 }
