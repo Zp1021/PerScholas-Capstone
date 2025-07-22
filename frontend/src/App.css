@@ -29,6 +29,21 @@ button {
     font-weight: bolder;
 }
 
+/* Gives the table a beige color surrounded by a black border */
+table {
+    background-color: beige;
+    width: 100%;
+    border: 3px solid black;
+    font-size: 2rem;
+}
+
+/* Adds a border and aligns text to center within table for better readability */
+th,td {
+    border: 2px dashed black;
+    text-align: center;
+}
+
+
 /* Navbar styling */
 .nav {
     background-color: lightgray;
