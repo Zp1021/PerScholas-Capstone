@@ -24,7 +24,7 @@ export default function Table() {
     console.log('players: ', players)
 
     return (
-        <>
+        <div className="table-div">
             <table>
                 <thead>
                     <tr>
@@ -41,6 +41,6 @@ export default function Table() {
                     )}
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }
