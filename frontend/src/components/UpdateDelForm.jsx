@@ -22,7 +22,8 @@ export default function UpdateDelForm() {
                     />
                 </label>
 
-                <button >submit</button>
+                <button >Update</button>
+                <button >Delete</button>
             </form>
         </>
     )
