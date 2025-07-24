@@ -1,3 +1,4 @@
+/* Body of the site uses a lightblue color */
 body {
     background-color: lightblue;
 }
@@ -12,6 +13,7 @@ label {
     font-size: 3rem;
 }
 
+/* Styling of form inputs */
 input {
     display: flex;
     flex-direction: column;
@@ -53,24 +55,25 @@ th,td {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    /* gap: 2rem; */
     padding: 0 1rem;
 }
 
-.site-title {
+/* Styles the home button*/
+.home{
     font-size: 3rem;
 }
 
+/* Styles the navbar and unordered list */
 .nav ul {
-    padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
     gap: 1rem;
 }
 
+/* Styles the links on the navbar */
 .nav a {
-    color: inherit;
+    color: black;
     text-decoration: none;
     height: 100%;
     display: flex;
@@ -79,17 +82,20 @@ th,td {
     font-size: 2rem;
 }
 
+/* Colors the background in a lighter color and bolds the text for better visability  */
 .nav li:hover {
     background-color: whitesmoke;
     font-weight: bolder;
 }
 
+/* Stlyes the message on the home page */
 .greeting {
     text-align: center;
     color: black;
     font-size: 3rem;
 }
 
+/* Styles the div containing the cat gif */
 .gif-container {
     margin: 15%;
     display: flex;
@@ -97,10 +103,12 @@ th,td {
     justify-content: center;
 }
 
+/* Styles the cat gif itself to be larger */
 .cats {
     width: 100rem;
 }
 
+/* Styles the form component seen on the game page */
 .score-form {
     display: flex;
     align-items: center;
@@ -109,11 +117,14 @@ th,td {
     font-weight: bolder;
 }
 
-.name-text {
-    size: 12rem;
+/* Centers the table for a better visual */
+.table-div{
+    display: flex;
+    justify-content: center;
 }
 
-.table-div{
+/* Centers the meme on the about page */
+.meme{
     display: flex;
     justify-content: center;
 }

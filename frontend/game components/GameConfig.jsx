@@ -1,8 +1,10 @@
+// Importing starting game code and phaser tools
 import Start from "./Start";
 import Phaser from "phaser";
 import { useEffect } from "react";
 
 
+// Game configurations allowing for the game to be in a div and exist within the browser
 export default function GameConfig() {
     const config = {
         type: Phaser.AUTO,
@@ -29,6 +31,7 @@ export default function GameConfig() {
         },
     }
 
+    // Allows for phaser game to properly render with in react
     useEffect(() => {
         const game = new Phaser.Game(config);
 

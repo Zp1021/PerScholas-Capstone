@@ -1,12 +1,15 @@
+// Importing react hooks
 import { useEffect, useState } from "react"
 
+// URL to access backend servers
 const URL = 'http://localhost:8080'
 
 export default function Table() {
 
-
+    // useState to render data later on in the react page
     const [players, setPlayers] = useState([])
 
+    // Function retrieves data from get end point
     async function getData() {
         try {
             const response = await fetch(`${URL}/players`)
@@ -17,12 +20,16 @@ export default function Table() {
         }
     }
 
+    // Allows for the data fetching function to occur and render only once
     useEffect(() => {
         getData()
     }, [])
 
-    console.log('players: ', players)
+    // Console representation of data
+    // console.log('players: ', players)
 
+    // Returns a table that is created with the respective entry ID's 
+    // containing the names and scores that were entered
     return (
         <div className="table-div">
             <table>
