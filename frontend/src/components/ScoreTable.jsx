@@ -1,5 +1,6 @@
 // Importing react hooks
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 // URL to access backend servers
 const URL = 'http://localhost:8080'
@@ -8,6 +9,8 @@ export default function Table() {
 
     // useState to render data later on in the react page
     const [players, setPlayers] = useState([])
+
+    const navigate = useNavigate()
 
     // Function retrieves data from get end point
     async function getData() {
@@ -33,6 +36,8 @@ export default function Table() {
         await fetch(`${URL}/players/${id}`, {
             method: 'DELETE'
         })
+        alert('Score deleted: Redirecting to game page')
+        navigate('/game')
         getData()
     }
 
