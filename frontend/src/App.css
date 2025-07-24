@@ -128,3 +128,15 @@ th,td {
     display: flex;
     justify-content: center;
 }
+
+.score-td{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: baseline;
+}
+.del-btn{
+    width: 2rem;
+    font-size: large;
+    ;
+}

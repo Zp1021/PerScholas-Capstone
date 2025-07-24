@@ -28,6 +28,14 @@ export default function Table() {
     // Console representation of data
     // console.log('players: ', players)
 
+    // Function to delete players by specific ID
+    async function handleDelete(id) {
+        await fetch(`${URL}/players/${id}`, {
+            method: 'DELETE'
+        })
+        getData()
+    }
+
     // Returns a table that is created with the respective entry ID's 
     // containing the names and scores that were entered
     return (
@@ -43,7 +51,12 @@ export default function Table() {
                     {players.map((player) =>
                         <tr key={player._id}>
                             <td>{player.name}</td>
-                            <td>{player.score}</td>
+                            <td className="score-td">
+                                {player.score}
+                                <button onClick={() => handleDelete(player._id)} className="del-btn">
+                                    x
+                                </button>
+                            </td>
                         </tr>
                     )}
                 </tbody>
