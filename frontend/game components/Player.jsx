@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 
+// Allows the player class to inherit necessary physics features for the game to feel responsive
 export default class Player extends Phaser.Physics.Arcade.Sprite {
     constructor(scene, x, y) {
         super(scene, x, y, 'dude');
@@ -12,6 +13,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.initAnimations();
     }
 
+    // Allows for sprite to be animated when moving left, right, or when idling
     initAnimations() {
         this.anims.create({
             key: 'left',
@@ -35,24 +37,28 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
     }
 
+    // Allows player to move left
     moveLeft() {
         this.setVelocityX(-200);
 
         this.anims.play('left', true);
     }
 
+    // Allows player to move right    
     moveRight() {
         this.setVelocityX(200);
 
         this.anims.play('right', true);
     }
 
+    // when players are not moving plays the idle animation
     idle() {
         this.setVelocityX(0);
 
         this.anims.play('turn');
     }
 
+    // Players to jump
     jump() {
         if (this.body.blocked.down) {
             this.setVelocityY(-425);

@@ -1,11 +1,14 @@
+// Import player functionality
 import Player from "./Player";
 
+// Allows the start of the game to inherit all things related to the scene
 export default class Start extends Phaser.Scene {
 
     constructor() {
         super('Start');
     }
 
+    // Loads respective assets
     preload() {
         
         this.load.setPath('/src/assets');
@@ -18,6 +21,7 @@ export default class Start extends Phaser.Scene {
         this.load.spritesheet('dude', 'dude.png', { frameWidth: 32, frameHeight: 48 });
     }
 
+    // Allocates assets to locations on the screen
     create() {
 
         this.add.image(400, 300, 'sky');
@@ -46,18 +50,24 @@ export default class Start extends Phaser.Scene {
             child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
         });
 
+        // Allows stars to interact with player and platforms
         this.physics.add.collider(this.stars, this.platforms);
         this.physics.add.overlap(this.player, this.stars, this.collectStar, null, this);
 
         this.score = 0;
         this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
+        this.gameOverText = this.add.text(400, 300, 'GAME OVER', { fontSize: '64px', fill: '#000' });
+        this.gameOverText.setOrigin(0.5)
+        this.gameOverText.visible = false
 
         this.bombs = this.physics.add.group();
         
+        // Allows hazards to interact with players and platforms
         this.physics.add.collider(this.bombs, this.platforms);
         this.physics.add.collider(this.player, this.bombs, this.hitBomb, null, this);
     }
 
+    // Allows players to persistently control the sprite
     update() {
    
         if (this.cursors.left.isDown) {
@@ -75,6 +85,8 @@ export default class Start extends Phaser.Scene {
 
     }
 
+    // Allows players to collect stars and earn score
+    // Releasing stage hazarads as the player collects more stars
     collectStar(player, star) {
         star.disableBody(true, true);
 
@@ -90,6 +102,8 @@ export default class Start extends Phaser.Scene {
         }
     }
 
+    // Allows players to interact with hazards
+    // when a hazard is hit triggers game over
     hitBomb (player, bomb) {
         this.physics.pause();
 
@@ -98,10 +112,13 @@ export default class Start extends Phaser.Scene {
         player.anims.play('turn');
 
         this.time.delayedCall(2000, () =>{
-            this.scene.start('GameOver');
+            // this.scene.start('GameOver');
+            this.gameOverText.visible = true
+            
         })
     }
 
+    // Method to release hazards at a random velocity in a specific area
     releaseBomb(){
         var x = (this.player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
