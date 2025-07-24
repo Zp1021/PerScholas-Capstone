@@ -1,5 +1,5 @@
 // Importing navbar component and cat gif
-import NavBar from "../components/NavBar";
+import NavBar from "../components/site components/NavBar";
 import cats from "../assets/gather-round.gif"
 
 

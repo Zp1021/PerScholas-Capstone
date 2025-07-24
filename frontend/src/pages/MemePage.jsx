@@ -1,5 +1,5 @@
 // Importing navbar component
-import NavBar from "../components/NavBar";
+import NavBar from "../components/site components/NavBar";
 
 export default function MemePage() {
     // Returns a page with a rendered navbar and a meme

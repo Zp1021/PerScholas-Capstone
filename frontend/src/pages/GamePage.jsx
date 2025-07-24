@@ -1,7 +1,7 @@
 // Importing navbar, phaser game, and score form components
-import NavBar from "../components/NavBar";
-import GameConfig from "../../game components/GameConfig";
-import ScoreForm from "../components/ScoreForm";
+import NavBar from "../components/site components/NavBar";
+import GameConfig from "../components/game components/GameConfig";
+import ScoreForm from "../components/site components/ScoreForm";
 
 
 export default function GamePage() {

@@ -1,4 +1,4 @@
-import '../App.css'
+import '../../App.css'
 import { Link } from 'react-router-dom'
 
 // Export function that returns the navbar of the main page
