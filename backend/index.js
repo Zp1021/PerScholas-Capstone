@@ -34,15 +34,16 @@ app.get('/players', async (req, res) => {
     }
 })
 
-app.get('/players/:id', async (req, res) => {
-    try {
-        const player = await Player.findById(req.params.id)
-        res.status(200).json(player)
-    } catch (e) {
-        console.log(e)
-        res.status(400).json(e)
-    }
-})
+// GET a specific player by ID
+// app.get('/players/:id', async (req, res) => {
+//     try {
+//         const player = await Player.findById(req.params.id)
+//         res.status(200).json(player)
+//     } catch (e) {
+//         console.log(e)
+//         res.status(400).json(e)
+//     }
+// })
 
 // POST a player
 app.post('/players', async (req, res) => {
@@ -55,15 +56,16 @@ app.post('/players', async (req, res) => {
     }
 })
 
-app.post('/players/:id', async (req, res) => {
-    try {
-        const player = await Player.create(req.body)
-        res.status(200).json(player)
-    } catch (e) {
-        console.log(e)
-        res.status(400).json(e)
-    }
-})
+// POST a specific player by ID
+// app.post('/players/:id', async (req, res) => {
+//     try {
+//         const player = await Player.create(req.body)
+//         res.status(200).json(player)
+//     } catch (e) {
+//         console.log(e)
+//         res.status(400).json(e)
+//     }
+// })
 
 // UPDATE a player score by their id
 app.patch('/players/:id', async (req, res) => {
