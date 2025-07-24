@@ -9,7 +9,7 @@ The technologies used in the making of this project are as follows: MongoDB for 
 OVERVIEW:
 The site has a basic landing page with a header and a navbar component that can be used to manually traverse throughout the pages. There are 3 other pages that display content, first of which is the game page where a game (made using the phaser framework) is displayed. 
 
-NOTE: the game is not of original design it is the basic game that the phaser tutorial walks users through to make in order to understand how phaser works. 
+NOTE: the game is not of original design it is the basic game that the phaser tutorial walks users through to make in order to understand how phaser works. The steps are within the series of post made via this link: https://phaser.io/tutorials/making-your-first-phaser-3-game/part1
 
 The game is being rendered on a react frontend as its own component on the page accompanied by the navbar component that rests at the top and a form component that is set to the side. The form is used to manually submit a name and score from playing the game.
 
