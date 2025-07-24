@@ -11,7 +11,7 @@ export default function NavBar() {
             <ul>
                 <li><Link to="/game">Game</Link></li>
                 <li><Link to="/scores">Scores</Link></li>
-                <li><Link to="/About">About</Link></li>
+                <li><Link to="/About">Meme</Link></li>
             </ul>
         </nav>
     )
